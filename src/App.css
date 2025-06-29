@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.tw-Card {
+  overflow: hidden;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.tw-Card-header {
+  display: flex;
+  align-items: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.tw-Card-header-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.tw-Card-header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tw-Card-header-name {
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.tw-Card-header-username {
+  color: #aaa;
 }
 
-.card {
-  padding: 2em;
+.tw-Card-aside {
+  padding: 0px 16px;
+  place-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+.tw-Card-aside-button {
+  font-weight: 800;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: 6px 12px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.tw-Card-aside-button:hover {
+  background: #1da1f2;
+  border: 2px solid #1da1f2;
+  color: #fff;
+}
+.tw-Card-aside-button.is-following:hover {
+  background: #f568683a;
+  border: 2px solid #630101;
+  color: #fff;
+}
+.tw-Card-aside-button.is-following {
+  background: #f5686800;
+  border: 2px solid #fff;
+  color: #fff;
+  width: 140px;
+}
+.tw-Card-aside-button.is-following:hover .tw-Card-aside-button-text {
+  display: none;
+}
+
+.tw-Card-aside-button.is-following:hover .tw-Card-aside-button-stopFollow {
+  display: block;
+}
+.tw-Card-aside-button-stopFollow {
+  display: none;
 }
